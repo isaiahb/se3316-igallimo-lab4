@@ -9,7 +9,8 @@ export const items: Item[] = [
 ];
 
 @Injectable({providedIn: 'root'})
-export class ConfigService {
+
+export class ApiService {
 	constructor(private http: HttpClient) { }
 	getItems(): Item[] {
 		return items;

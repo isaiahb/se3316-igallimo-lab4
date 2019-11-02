@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { Item } from "../item";
+import { Component, OnInit, Input } from '@angular/core';
+
 
 @Component({
 	selector: 'app-item',
@@ -7,20 +7,26 @@ import { Item } from "../item";
 	styleUrls: ['./item.component.scss']
 })
 
-export class ItemComponent implements OnInit {
-	name = 'the cool book';
-	id = '9001';
-	loanPeriod = 10;
-	type = 'book';
+export class ItemComponent {
+	@Input() name: string;
+	@Input() type: string;
+	@Input() id: number;
+	@Input() loanPeriod: number;
 
-	// constructor(private heroService: HeroService) { }
+	// items: Item[];
+	// getItems(): void {
+	// 	this.items = this.apiService.getItems();
+	// }
 
+	// constructor(private apiService: ApiService) { }
+
+	// ngOnInit() {
+	// 	this.getItems();
+	// }
 	// constructor(id, name, loanPeriod, type) { 
 	// 	this.id = id;
 	// 	this.name = name;
 	// 	this.loanPeriod = loanPeriod;
 	// 	this.type = type;
 	// }
-
-	ngOnInit() {}
 }
