@@ -12,6 +12,7 @@ export class ItemComponent {
 	@Input() type: string;
 	@Input() id: number;
 	@Input() loanPeriod: number;
+	@Input() quantity: number;
 
 	// items: Item[];
 	// getItems(): void {

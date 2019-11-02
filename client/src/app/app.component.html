@@ -1,7 +1,24 @@
 <div class="content" role="main">
 	<div *ngFor="let item of items">
-		<app-item [name]="item.name" [id]="item.id" [type]="item.type" [loanPeriod]="item.loanPeriod"></app-item>
+		<app-item [name]="item.name" [id]="item.id" [type]="item.type" [loanPeriod]="item.loanPeriod" [quantity]="item.quantity"></app-item>
+		<button>edit {{item.name}}</button>
 		<br>
+		<br>
+
+	</div>
+
+	<div>
+		<h2>Editor</h2>
+	
+		<label>quantity</label>
+		<input id="edit-quantity" type="number">
+		<br>
+		
+		<label>loan period</label>
+		<input id="edit-loanPeriod" type="number">
+		<br>
+	
+		<button id="update-button">update</button>
 	</div>
 </div>
 

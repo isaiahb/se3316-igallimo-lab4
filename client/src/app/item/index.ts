@@ -3,4 +3,5 @@ export class Item {
 	name: string;
 	type: string;
 	loanPeriod: number;
+	quantity: number;
 }
