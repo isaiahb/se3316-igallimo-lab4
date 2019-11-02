@@ -13,21 +13,4 @@ export class ItemComponent {
 	@Input() id: number;
 	@Input() loanPeriod: number;
 	@Input() quantity: number;
-
-	// items: Item[];
-	// getItems(): void {
-	// 	this.items = this.apiService.getItems();
-	// }
-
-	// constructor(private apiService: ApiService) { }
-
-	// ngOnInit() {
-	// 	this.getItems();
-	// }
-	// constructor(id, name, loanPeriod, type) { 
-	// 	this.id = id;
-	// 	this.name = name;
-	// 	this.loanPeriod = loanPeriod;
-	// 	this.type = type;
-	// }
 }

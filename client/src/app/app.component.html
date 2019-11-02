@@ -1,25 +1,25 @@
 <div class="content" role="main">
 	<div *ngFor="let item of items">
 		<app-item [name]="item.name" [id]="item.id" [type]="item.type" [loanPeriod]="item.loanPeriod" [quantity]="item.quantity"></app-item>
-		<button>edit {{item.name}}</button>
+		<button (click)="editItem(item)">edit {{item.name}}</button>
 		<br>
 		<br>
-
 	</div>
 
-	<div>
+	<div *ngIf="editingItem">
 		<h2>Editor</h2>
-	
-		<label>quantity</label>
-		<input id="edit-quantity" type="number">
+		<p>currently updating <b>{{editingItem.name}}</b></p>
+		<label>loan period</label>
+		<input [(ngModel)]="editLoanPeriod " #ctrl="ngModel" type="number">
 		<br>
 		
-		<label>loan period</label>
-		<input id="edit-loanPeriod" type="number">
+		<label>quantity</label>
+		<input [(ngModel)]="editQuantity" #ctrl="ngModel" type="number">
 		<br>
-	
-		<button id="update-button">update</button>
+
+		<button (click)="updateItem()">update</button>
 	</div>
+
 </div>
 
 <router-outlet></router-outlet>
